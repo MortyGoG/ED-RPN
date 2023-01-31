@@ -14,7 +14,7 @@ public class Conversion {
 
             if (Character.isDigit(c)) {
                 queue.Encolar(c);
-            } else if (c == '+' || c == '-' || c == '*' || c == '/') {
+            } else if (esOperador(c)) {
                 while (!stack.estaVacia() && esOperador(stack.mostrarTope())) {
                     queue.Encolar(stack.pop());
                 }
