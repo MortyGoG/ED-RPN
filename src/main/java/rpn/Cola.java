@@ -5,23 +5,23 @@ package rpn;
  */
 public class Cola {
 
-    private int[] queue;// Arreglo para almacenar
+    private Character[] queue;// Arreglo para almacenar
     private int frente, fondo;
     private int tamaño; // Tamaño queue
     private int max;// Tamaño del arreglo
 
     public Cola(int max) {
         this.max = max;
-        queue = new int[max];
+        queue = new Character[max];
         frente = 0;
         fondo = -1;
         tamaño = 0;
     }
 
     // Metodo para Encolar un dato entero
-    public void Encolar(int datoEncolado){
+    public void Encolar(Character datoEncolado) {
         if (estaLlena()) {
-            //throw new Exception("Cola Llena");
+            // throw new Exception("Cola Llena");
             return;
         }
         fondo = (fondo + 1) % max;
@@ -30,14 +30,14 @@ public class Cola {
     }
 
     // Metodo para Desencolar un dato
-    public int Desencolar() throws Exception {
+    public Character Desencolar() {
+        Character aux = 0;
         if (estaVacia()) {
-            //throw new Exception("Cola Vacia");
-            return Integer.MIN_VALUE;
+            // throw new Exception("Cola Vacia");
+            return aux;
         }
-
         frente = (frente + 1) % max;
-        int data = queue[frente];
+        Character data = queue[frente];
         tamaño--;
         return data;
 
@@ -54,10 +54,11 @@ public class Cola {
     }
 
     // Metodo para visualizar el frente (1er elemento agregado)
-    public int peek(){
+    public Character peek() {
+        Character auxpeek = 0;
         if (estaVacia()) {
-            //throw new Exception("Cola Vacia");
-            return Integer.MIN_VALUE;
+            // throw new Exception("Cola Vacia");
+            return auxpeek;
         }
         return queue[frente];
     }

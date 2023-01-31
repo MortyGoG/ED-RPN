@@ -37,9 +37,10 @@ public class PilaStrings {
 
     // Metodo desapilado
     public Character pop() {
-        Character aux;
+        Character aux = 0;
         if (estaVacia()) {
             // System.out.println("PilaStrings Vacia");
+            return aux;
         }
         aux = datos[tope];
         datos[tope] = null;
