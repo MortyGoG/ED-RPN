@@ -8,8 +8,8 @@ public class Conversion {
 
     public static String toRPN(String expresion) {
         StringBuilder output = new StringBuilder();
-        Pila stack = new Pila(10);
-
+        PilaStrings stack = new PilaStrings(10);
+        //Ciclo
         for (int i = 0; i < expresion.length(); i++) {
             char c = expresion.charAt(i);
 

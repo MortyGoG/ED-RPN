@@ -3,13 +3,13 @@ package rpn;
  *
  * @author Morty
  */
-public class Pila {
-    // Atributos de Pila
+public class PilaStrings {
+    // Atributos de PilaStrings
     private int max, tope;// Variables de control de pila
     private Character datos[]; // Arreglo
 
-    // Constructor de Pila
-    public Pila(int max) {
+    // Constructor de PilaStrings
+    public PilaStrings(int max) {
         this.max = max;
         tope = -1;
         datos = new Character[max];
@@ -28,7 +28,7 @@ public class Pila {
     // Metodo apilado
     public void push(Character ponerElemento) {
         if (estaLlena()) {
-            // System.out.println("Pila Llena");
+            // System.out.println("PilaStrings Llena");
         } else {
             tope++;
             datos[tope] = ponerElemento;
@@ -39,7 +39,7 @@ public class Pila {
     public Character pop() {
         Character aux;
         if (estaVacia()) {
-            // System.out.println("Pila Vacia");
+            // System.out.println("PilaStrings Vacia");
         }
         aux = datos[tope];
         datos[tope] = null;
@@ -52,7 +52,7 @@ public class Pila {
         if (!estaVacia()) {
             return datos[tope];
         } else {
-            // System.out.println("Pila Vacia");
+            // System.out.println("PilaStrings Vacia");
             return null;
         }
     }

@@ -4,7 +4,7 @@ import Igu.Pantalla;
 
 /**
  *
- * @author Morty y Juan
+ * @author Morty
  */
 public class Main {
     public static void main(String[] args) {
