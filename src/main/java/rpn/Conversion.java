@@ -5,10 +5,6 @@ package rpn;
  */
 public class Conversion {
 
-    public static void main(String[] args) {
-        System.out.println(toRPN("5+5-3"));
-    }
-
     public static String toRPN(String expresion) {
         StringBuilder output = new StringBuilder();
         PilaStrings stack = new PilaStrings(10);
